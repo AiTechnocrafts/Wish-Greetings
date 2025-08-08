@@ -169,7 +169,6 @@
         <!-- 2. Hinglish Quote with stylish font -->
         <p class="quote">
             Ye dhaga sirf ek dori nahi, ye hai bepanah pyaar aur suraksha ka waada. Happy Raksha Bandhan!
-            With Love From Jeet.
         </p>
 
         <!-- 3. Name Input Box -->
@@ -195,8 +194,8 @@
             const message = `*Happy Raksha Bandhan!* 💖\n\n` +
                             `I'm sending you a very Special Gift on this festival.✨\n\n` +
                             `plz open this link:\n` +
-                            `*From: ${name}* 🎁`;
-                            `${pageLink}\n\n` +
+                            `*From: ${name}* 🎁\n\n` +
+                            `${pageLink}` ;
                             
 
             const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
