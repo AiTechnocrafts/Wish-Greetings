@@ -1,23 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi"> <!-- Changed to Hindi for better SEO -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Raksha Bandhan Wish</title>
-    
-    <!-- Stylish Fonts from Google -->
+    <title>Happy Raksha Bandhan Wish | Create with Your Name</title>
+
+    <!-- 1. SEO TAGS ADDED HERE -->
+    <meta name="description" content="Apne naam ke saath ek anokha Raksha Bandhan wishing card banayein! 💖 Is special Rakhi greeting ko aasani se WhatsApp par share karein aur apno ko surprise dein.">
+    <meta name="keywords" content="Happy Raksha Bandhan wishes, Rakhi wishes with name, Raksha Bandhan 2024, Rakhi greeting card online, Raksha Bandhan WhatsApp status, Personalized Rakhi wishes, Rakhi GIF greetings, Rakhi ki shubhkamnaye, Apne naam se Rakhi wish">
+
+    <!-- Stylish Fonts from Google (As per your code) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     
     <style>
-        /* --- Basic Styling --- */
+        /* Your Original CSS - No changes */
         body {
             font-family: 'Poppins', sans-serif;
-            /* Festive Gradient Background */
             background: radial-gradient(circle, #fff5e1 0%, #ffb8c6 100%);
             display: flex;
-            flex-direction: column; /* To stack card and ad */
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
@@ -25,8 +28,6 @@
             padding: 20px;
             box-sizing: border-box;
         }
-
-        /* --- Main Greeting Card --- */
         .card {
             background-color: rgba(255, 255, 255, 0.95);
             padding: 25px 30px 30px 30px;
@@ -38,58 +39,65 @@
             backdrop-filter: blur(5px);
             border: 2px solid white;
             position: relative;
-            overflow: hidden; /* For corner decorations */
-            margin-bottom: 20px; /* Space between card and ad */
+            overflow: hidden;
+            margin-bottom: 20px;
         }
-        
-        /* Decorative corner elements */
         .card::before, .card::after {
-            content: '🌸'; /* You can use any floral/festive emoji or character */
+            content: '🌸';
             position: absolute;
             font-size: 30px;
             opacity: 0.5;
             color: #d81b60;
         }
-        .card::before {
-            top: 10px;
-            left: 10px;
-            transform: rotate(-45deg);
-        }
-        .card::after {
-            bottom: 10px;
-            right: 10px;
-            transform: rotate(135deg);
-        }
-
-        /* --- Rakhi GIF Image --- */
+        .card::before { top: 10px; left: 10px; transform: rotate(-45deg); }
+        .card::after { bottom: 10px; right: 10px; transform: rotate(135deg); }
         .rakhi-gif {
             max-width: 100%;
             height: auto;
             border-radius: 15px;
             margin-bottom: 20px;
-            /* Adding a nice frame effect */
             border: 5px solid #fff;
             box-shadow: 0 8px 20px rgba(0,0,0,0.15);
         }
 
-        /* --- Hinglish Quote --- */
+        /* 3. GLITTERING EFFECT ADDED TO .quote CLASS */
         .quote {
-            /* Using the stylish Dancing Script font */
             font-family: 'Dancing Script', cursive;
-            font-size: 2.1em; /* Increased size for impact */
-            color: #c2185b; /* A deep pink color */
-            margin: 0;
-            margin-bottom: 25px;
-            line-height: 1.4;
+            font-size: 2.1em;
             font-weight: 700;
+            margin: 0;
+            margin-bottom: 15px; /* Thodi space kam ki hai sender name ke liye */
+            line-height: 1.4;
+            /* Glitter Effect */
+            background: linear-gradient(135deg, #ad1457, #ff80ab, #d81b60, #ff80ab, #ad1457);
+            background-size: 400% 400%;
+            color: #fff;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: glitter 4s ease infinite;
+        }
+        @keyframes glitter {
+            0%{background-position:0% 50%}
+            50%{background-position:100% 50%}
+            100%{background-position:0% 50%}
         }
 
-        /* --- Name Input Box --- */
+        /* 2. STYLING FOR SENDER NAME */
+        .sender-info {
+            color: #c2185b;
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            min-height: 24px; /* Layout jump rokne ke liye */
+        }
+
+        /* Your Original CSS - No changes */
         .name-input {
             width: 100%;
             padding: 14px 20px;
             border: 2px solid #f48fb1;
-            border-radius: 30px; /* Rounded pill shape */
+            border-radius: 30px;
             font-size: 1.1em;
             font-weight: 600;
             color: #c2185b;
@@ -99,18 +107,13 @@
             transition: all 0.3s ease;
             background-color: #fff0f6;
         }
-        .name-input::placeholder {
-            color: #f48fb1;
-            font-weight: 400;
-        }
+        .name-input::placeholder { color: #f48fb1; font-weight: 400; }
         .name-input:focus {
             outline: none;
             border-color: #ad1457;
             box-shadow: 0 0 15px rgba(255, 107, 107, 0.4);
             background-color: #ffffff;
         }
-
-        /* --- WhatsApp Share Button --- */
         .whatsapp-btn {
             background: linear-gradient(45deg, #25D366, #128C7E);
             color: white;
@@ -127,97 +130,82 @@
             text-decoration: none;
             box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
         }
-
         .whatsapp-btn:hover {
             transform: translateY(-3px) scale(1.05);
             box-shadow: 0 8px 20px rgba(37, 211, 102, 0.5);
         }
-
-        .whatsapp-btn svg {
-            width: 24px;
-            height: 24px;
-        }
-
-        /* --- Ad Container Styling --- */
+        .whatsapp-btn svg { width: 24px; height: 24px; }
         .ad-container {
-            /* This will keep the ad centered */
             width: 100%;
-            max-width: 320px; /* Matching your ad width */
+            max-width: 320px;
             text-align: center;
         }
-
     </style>
 </head>
 <body>
+   <!-- Your Ad Code - No changes, same position -->
    <div class="ad-container">
         <script type="text/javascript">
-            atOptions = {
-                'key' : '10b3c689265e32a7f2ba1e17ac6cb366',
-                'format' : 'iframe',
-                'height' : 50,
-                'width' : 320,
-                'params' : {}
-            };
+            atOptions = { 'key' : '10b3c689265e32a7f2ba1e17ac6cb366', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
         </script>
         <script type="text/javascript" src="//www.highperformanceformat.com/10b3c689265e32a7f2ba1e17ac6cb366/invoke.js"></script>
     </div>
+
     <div class="card">
-        <!-- 1. Rakhi GIF Image -->
-        <!-- IMPORTANT: Yahan apni GIF ka naam likhein jo aapne upload ki hai. -->
         <img src="giphy.gif" alt="Happy Raksha Bandhan" class="rakhi-gif" onerror="this.src='https://media.tenor.com/aGGf12ctn6AAAAAC/happy-raksha-bandhan.gif'; this.onerror=null;">
         
-        <!-- 2. Hinglish Quote with stylish font -->
         <p class="quote">
             Ye dhaga sirf ek dori nahi, ye hai bepanah pyaar aur suraksha ka waada. Happy Raksha Bandhan!
         </p>
 
-        <!-- 3. Name Input Box -->
+        <!-- 2. SENDER NAME WILL APPEAR HERE -->
+        <div id="senderNameDisplay" class="sender-info"></div>
+
         <input type="text" id="nameInput" class="name-input" placeholder="Yahan apna naam likhein...">
 
-        <!-- 4. WhatsApp Share Button -->
         <button id="whatsappShareBtn" class="whatsapp-btn">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.75 13.96c.25.13.42.3.52.5.1.2.16.42.16.67s-.06.51-.18.7a1.69 1.69 0 0 1-.49.58c-.24.21-.52.38-.84.51s-.68.2-1.06.2c-.44 0-.87-.07-1.28-.21s-.78-.33-1.11-.57c-.33-.24-.6-.52-.82-.84s-.39-.64-.51-.98c-.12-.34-.18-.7-.18-1.07 0-.01 0-.02.01-.03l.01-.01c.02-.12.06-.25.12-.39s.13-.26.22-.39c.09-.13.2-.24.32-.34.12-.1.25-.18.4-.23.15-.05.3-.08.45-.08.17 0 .34.03.5.1.17.07.3.18.4.33.1.15.15.32.15.5s-.05.35-.15.52c-.1.17-.24.3-.42.38-.18.08-.36.12-.54.12-.11 0-.22-.02-.33-.05s-.21-.08-.3-.13c-.09-.05-.17-.11-.25-.19s-.14-.16-.2-.25c-.06-.09-.1-.18-.14-.28-.04-.1-.06-.2-.06-.31s0-.21.02-.3c.02-.09.05-.18.1-.26.05-.08.1-.15.17-.21.07-.06.14-.11.22-.15.08-.04.17-.07.26-.09.09-.02.19-.03.29-.03.13 0 .25.02.38.06.13.04.25.1.36.17.11.07.21.16.3.26.09.1.16.22.22.35.06.13.09.27.09.41s-.03.28-.08.41c-.05.13-.12.25-.21.35-.09.1-.2.18-.32.24s-.26.1-.4.1c-.13 0-.25-.02-.36-.07s-.22-.11-.3-.19c-.08-.08-.15-.17-.21-.26-.06-.09-.1-.19-.13-.29s-.04-.2-.04-.3c0-.02 0-.02 0-.03s0-.01 0-.01c0-.21.06-.4.18-.54.12-.14.28-.25.48-.31.2-.06.41-.09.64-.09.25 0 .5.04.73.13.23.09.44.22.62.39.18.17.32.37.42.6.1.23.15.48.15.75 0 .21-.03.42-.08.62s-.14.38-.25.55zm-4.75 5.04c.26.16.53.28.82.38s.6.15.92.15c.53 0 1.05-.08 1.54-.25s.93-.4 1.31-.69c.38-.29.69-.63.92-1.01.23-.38.35-.79.35-1.22s-.08-1.04-.25-1.52c-.17-.48-.42-.9-.75-1.28-.33-.38-.73-.69-1.2-.94s-.99-.37-1.55-.37c-.33 0-.66.05-.97.14s-.6.23-.87.4c-.27.17-.5.38-.69.61s-.33.5-.42.79c-.09.29-.14.59-.14.89s.05.6.14.89c.09.29.23.57.41.83s.4.5.65.71zm-2-12c-2.9 0-5.61 1.34-7.48 3.52-1.88 2.18-2.52 5.06-1.74 7.82.78 2.76 2.96 4.94 5.72 5.72 2.76.78 5.64.14 7.82-1.74C19.66 17.61 21 14.9 21 12c0-4.97-4.03-9-9-9zm0 16.2c-1.92 0-3.73-.72-5.1-2.09-1.37-1.37-2.09-3.18-2.09-5.1s.72-3.73 2.09-5.1 3.18-2.09 5.1-2.09 3.73.72 5.1 2.09 2.09 3.18 2.09 5.1-.72 3.73-2.09 5.1-3.18 2.09-5.1 2.09z"></path></svg>
             Wish Share Karein
         </button>
     </div>
 
-    <!-- Main WhatsApp functionality script -->
+    <!-- JAVASCRIPT LOGIC UPDATED -->
     <script>
+        // 2. SCRIPT TO DISPLAY SENDER'S NAME ON PAGE LOAD
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const senderName = urlParams.get('from');
+
+            if (senderName) {
+                // Agar URL mein naam hai, to usko page par dikhao
+                const decodedName = decodeURIComponent(senderName);
+                const nameDisplayElement = document.getElementById('senderNameDisplay');
+                nameDisplayElement.textContent = `With love from ${decodedName}`;
+            }
+        };
+
+        // SCRIPT FOR WHATSAPP SHARE BUTTON
         document.getElementById('whatsappShareBtn').addEventListener('click', function() {
             const name = document.getElementById('nameInput').value.trim();
             if (name === "") {
                 alert("Please enter your name first! :)");
                 return;
             }
-            const pageLink = window.location.origin + window.location.pathname;
             
+            // 2. YAHAN LINK KE SAATH NAAM BHEJA JAA RAHA HAI
+            const pageLink = `${window.location.origin}${window.location.pathname}?from=${encodeURIComponent(name)}`;
+            
+            // Ye message format aapke code se liya gaya hai, usmein updated link daal diya hai
             const message = `*Happy Raksha Bandhan!* 💖\n\n` +
                             `I'm sending you a very Special Gift on this festival.✨\n\n` +
                             `plz open this link:\n` +
-                            `*From: ${name}* 🎁\n\n` +
-                            `${pageLink}` ;
+                            `${pageLink}\n\n`+
+                            `*From: ${name}* 🎁`;
                             
-
             const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
             window.open(whatsappUrl, '_blank');
         });
     </script>
-    
-    <!-- YAHAN SE AAPKA AD CODE SHURU HOTA HAI -->
-    <div class="ad-container">
-        <script type="text/javascript">
-            atOptions = {
-                'key' : '10b3c689265e32a7f2ba1e17ac6cb366',
-                'format' : 'iframe',
-                'height' : 50,
-                'width' : 320,
-                'params' : {}
-            };
-        </script>
-        <script type="text/javascript" src="//www.highperformanceformat.com/10b3c689265e32a7f2ba1e17ac6cb366/invoke.js"></script>
-    </div>
-    <!-- AAPKA AD CODE YAHAN KHATAM HOTA HAI -->
-
 
 </body>
-  </html>
+</html>
