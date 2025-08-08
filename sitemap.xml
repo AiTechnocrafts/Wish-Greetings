@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Ye aapke main page ka URL hai -->
+  <url>
+    <!-- IMPORTANT: Is link ko apni live website ke link se badalna hai -->
+    <loc>https://your-username.github.io/your-repository-name/</loc>
+    
+    <!-- Page aakhri baar kab update hua tha -->
+    <lastmod>2024-08-15</lastmod>
+    
+    <!-- Page kitni jaldi badalta hai (yearly, monthly, weekly, etc.) -->
+    <changefreq>yearly</changefreq>
+    
+    <!-- Is page ki importance (0.1 se 1.0 tak). Kyunki ek hi page hai, to 1.0 rakhenge. -->
+    <priority>1.0</priority>
+  </url>
+
+</urlset>
